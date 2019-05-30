@@ -1,0 +1,29 @@
+sylius_shop_account_subscribe:
+    path: /account/subscribe
+    methods: [GET]
+    defaults:
+        _controller: app.controller.visiteur_enregistre:subscribe
+
+sylius_shop_account_subscribe_payement:
+    path: /account/subscribe/payement
+    methods: [POST]
+    defaults:
+        _controller: app.controller.visiteur_enregistre:payement
+
+app_shop_custom_index:
+    path: /custom
+    methods: [GET]
+    defaults:
+        _controller: app.controller.shop.homepage:indexAction
+
+app_shop_custom_custom_page:
+    path: /page/cutstom-page
+    methods: [GET]
+    defaults:
+        _controller: app.controller.shop.homepage:customAction
+
+app_shop_custom_procuct:
+    path: /page/product
+    methods: [GET]
+    defaults:
+        _controller: sylius.controller.product:showAction

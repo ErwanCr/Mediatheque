@@ -1,0 +1,19 @@
+{% extends '@SyliusShop/Account/layout.html.twig' %}
+
+{% block breadcrumb %}
+    <div class="ui breadcrumb">
+        <a href="{{ path('sylius_shop_homepage') }}" class="section">{{ 'sylius.ui.home'|trans }}</a>
+        <div class="divider"> / </div>
+        <div class="active section">{{ 'sylius.ui.my_account'|trans }}</div>
+    </div>
+{% endblock %}
+
+{% block subcontent %}
+	<div>Abonnement</div>
+	<form class="item" id="verification-form" action="{{ path('sylius_shop_account_subscribe_payement') }}" method="post">
+		<input type="radio" name="abonnement" value="classique">Classique
+		<input type="radio" name="abonnement" value="premium">Premium
+		<input type="radio" name="abonnement" value="jeune">Jeune
+        <button type="submit" class="ui basic icon mini button">Validez</button>
+    </form>
+{% endblock %}
